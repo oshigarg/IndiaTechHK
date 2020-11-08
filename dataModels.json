@@ -1,0 +1,9 @@
+{
+    "71789ed9-58fe-f2d2-d368-4584d2d1835b": {
+        "dataModelId": "71789ed9-58fe-f2d2-d368-4584d2d1835b",
+        "name": "shipment",
+        "description": "stores shipment details",
+        "dataSource": "neutrinos-training-rt",
+        "fields": []
+    }
+}

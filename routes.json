@@ -1,0 +1,19 @@
+{
+    "routes": [
+        {
+            "path": "Home",
+            "component": "homeComponent",
+            "canActivate": "NeutrinosAuthGuardService"
+        },
+        {
+            "path": "''",
+            "redirectTo": "Home",
+            "pathMatch": "full",
+            "default": true
+        },
+        {
+            "path": "**",
+            "component": "PageNotFoundComponent"
+        }
+    ]
+}

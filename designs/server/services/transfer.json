@@ -1,0 +1,182 @@
+[
+    {
+        "id": "SSD_SERVICE_ID_sd_68OtdOj6Emj8g2mh",
+        "type": "tab",
+        "createdDate": "2020-11-08T04:33:22.441Z",
+        "label": "transfer",
+        "disabled": false,
+        "info": "",
+        "generateNext": true,
+        "serviceName": "transfer"
+    },
+    {
+        "id": "sd_uLIzc9iKbnzBd49c",
+        "type": "HttpIn",
+        "z": "SSD_SERVICE_ID_sd_68OtdOj6Emj8g2mh",
+        "viewType": "server",
+        "nodeType": "start",
+        "name": "",
+        "path": "/shipment",
+        "uploadpath": "",
+        "summary": "",
+        "description": "",
+        "method": "get",
+        "sequenceId": "",
+        "consumes": "",
+        "produces": "",
+        "filetype": "path",
+        "acceptFileUpload": false,
+        "httpOptions": {
+            "/shipment": {
+                "get": {
+                    "summary": "",
+                    "description": "",
+                    "consumes": [],
+                    "produces": [],
+                    "parameters": [],
+                    "responses": {}
+                }
+            }
+        },
+        "editableListData": {
+            "responses": [],
+            "params": [],
+            "produces": [],
+            "consumes": []
+        },
+        "inputs": 0,
+        "outputs": 1,
+        "category": "HTTP",
+        "__ssdTypeInputs__": {
+            "uploadpath": {
+                "type": "str",
+                "value": "",
+                "nullable": "true",
+                "nullableValue": "",
+                "constant": false
+            }
+        },
+        "x": 200,
+        "y": 180,
+        "wires": [
+            [
+                "sd_d3I6qUO2OV26mMlF"
+            ]
+        ],
+        "generateNext": true,
+        "serviceName": "transfer",
+        "functionName": "sd_uLIzc9iKbnzBd49c"
+    },
+    {
+        "id": "sd_d3I6qUO2OV26mMlF",
+        "type": "Mongodb",
+        "z": "SSD_SERVICE_ID_sd_68OtdOj6Emj8g2mh",
+        "viewType": "server",
+        "nodeType": "flow",
+        "name": "",
+        "databaseConfig": "sd_KidNuxBcqL8UvOqD",
+        "collection": "\"XYZ\"",
+        "options": "",
+        "resultMapping": "bh.DEF",
+        "operation": "find",
+        "argumentArray": [
+            "query"
+        ],
+        "aggregate": "",
+        "operations": "",
+        "query": "bh.ABC",
+        "fieldOrSpec": "",
+        "filter": "",
+        "key": "",
+        "docId": "",
+        "indexName": "",
+        "replacement": "",
+        "update": "",
+        "xAxis": "",
+        "yAxis": "",
+        "indexes": "",
+        "docs": "",
+        "document": "",
+        "newName": "",
+        "doc": "",
+        "filePath": "",
+        "fileName": "",
+        "pipeline": "",
+        "functionName": "sd_d3I6qUO2OV26mMlF",
+        "category": "Storage",
+        "__ssdTypeInputs__": {
+            "collection": {
+                "type": "str",
+                "value": "XYZ",
+                "constant": false
+            },
+            "options": {
+                "type": "bh",
+                "value": "",
+                "nullable": "true",
+                "constant": false
+            },
+            "resultMapping": {
+                "type": "bh",
+                "value": "DEF",
+                "constant": false
+            },
+            "query": {
+                "type": "bh",
+                "value": "ABC",
+                "constant": false
+            }
+        },
+        "x": 305,
+        "y": 180,
+        "wires": [
+            [
+                "sd_9xClzWSogBPA1tes"
+            ]
+        ],
+        "generateNext": false,
+        "generated": true
+    },
+    {
+        "id": "sd_9xClzWSogBPA1tes",
+        "type": "HttpOut",
+        "z": "SSD_SERVICE_ID_sd_68OtdOj6Emj8g2mh",
+        "viewType": "server",
+        "nodeType": "flow",
+        "name": "",
+        "headers": {},
+        "responseBody": {
+            "type": "bh",
+            "value": "XYZ",
+            "ssd_typedInputField": true
+        },
+        "httpcode": {
+            "type": "num",
+            "value": 200,
+            "ssd_typedInputField": true
+        },
+        "responseType": "obj",
+        "responseMapping": {
+            "status": 200,
+            "obj": "bh.XYZ",
+            "send": "bh.XYZ"
+        },
+        "inputs": 1,
+        "outputs": 0,
+        "editableListData": {
+            "headers": []
+        },
+        "cookiesList": {},
+        "switchStates": {
+            "headers": "Map",
+            "cookies": "Map"
+        },
+        "functionName": "sd_9xClzWSogBPA1tes",
+        "category": "HTTP",
+        "x": 425,
+        "y": 180,
+        "wires": [],
+        "generateNext": false,
+        "generated": true
+    }
+]
